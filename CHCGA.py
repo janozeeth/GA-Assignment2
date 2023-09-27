@@ -27,7 +27,7 @@ class CHCGA(SGA):
         self.objs = np.array([np.max([self.objective(sol),0]) for sol in self.population])
         self.fits = np.array([1./(obj+1) for obj in self.objs])
         
-        if(!self.reliability_checks[0]):
+        if(not self.reliability_checks[0]):
             self.numEvals += self.pop_size
 
         childParent = np.append(self.population, self.parentPop)
