@@ -171,6 +171,9 @@ class SGA:
             self.mutation()
             
             self.trackStats()
+
+            #Stop if within 1% of optimum
+            if(self.reliability_checks[0]): break
         
         if(self.statsFile!=None): self.statsFile.close()
 
